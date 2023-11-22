@@ -1,12 +1,314 @@
 <body>
     <div class="hero">
-        <h1>CSS Transform</h1>
-        <h2>Matouš Drábek</h2>
-        <h3>Webové Technologie</h3>
+        <div class="text">
+            <h1>CSS Transform</h1>
+            <h2>Matouš Drábek</h2>
+            <h3>Webové Technologie</h3>
+        </div>
     </div>
-    <pre><code>&lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;link rel="stylesheet" href="/path/to/styles/default.css"&gt;
-        &lt;script src="/path/to/highlight.min.js"&gt;&lt;/script&gt;
-        </code></pre>
+    <div class="grid">
+        <div class="container">
+            <h1>K čemu transform slouží?</h1>
+            <p>Úprava elementů</p>
+            <ul class="list">
+                <li>Velikost</li>
+                <li>Rotace</li>
+                <li>3D Rotace</li>
+                <li>Prespektiva</li>
+            </ul>
+        </div>
+        <div class="container">
+            <h1>K čemu transform slouží?</h1>
+            <p>Úprava elementů</p>
+            <ul class="list">
+                <li>Animace tlačítek</li>
+                <li>Absolutní pozice</li>
+                <li>Hraní si</li>
+            </ul>
+        </div>
+    </div>
+    <h1 class="label">Ukázky</h1>
+    <div class="container ">
+        <h2>Translate</h2>
+        <div class="row">
+            <div class="showcase sc1">
+                <div></div>
+            </div>
+            <div>
+                <h3>HTML</h3>
+                <pre><code>
+&lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+                </code></pre>
+            </div>
+            <div>
+                <h3>css</h3>
+                <pre><code>
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2>Rotate</h2>
+        <div class="row">
+            <div class="showcase sc2">
+                <div class="btn">
+                    <p>Hover me!</p>
+                </div>
+            </div>
+            <div>
+                <h3>HTML</h3>
+                <pre><code>
+&lt;div class=&quot;btn&quot;&gt;
+    &lt;p&gt;Hover me!&lt;/p&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div>
+                <h3>css</h3>
+                <pre><code>
+.btn {
+    /*center*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    transition: .8s;
+}
+
+.btn:hover {
+    transform: rotate(360deg);
+    transition: .8s;
+}
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2>Skew</h2>
+        <div class="row">
+            <div class="showcase sc3">
+                <div class="note">
+                    <h1>TODO</h1>
+                    <ul>
+                        <li>Sleep</li>
+                        <li>Eat</li>
+                        <li>Drink</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3>HTML</h3>
+                <pre><code>
+&lt;div class=&quot;note&quot;&gt;
+    &lt;h1&gt;TODO&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Sleep&lt;/li&gt;
+        &lt;li&gt;Eat&lt;/li&gt;
+        &lt;li&gt;Drink&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div>
+                <h3>css</h3>
+                <pre><code>
+.note {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(248, 248, 119);
+    color: #000;
+    padding: 15px 40px 20px 40px;
+    transform: skew(20deg, 20deg);
+}
+                </code></pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="showcase sc4">
+                <div class="note">
+                    <h1>TODO</h1>
+                    <ul>
+                        <li>Sleep</li>
+                        <li>Eat</li>
+                        <li>Drink</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3>HTML</h3>
+                <pre><code>
+&lt;div class=&quot;note&quot;&gt;
+    &lt;h1&gt;TODO&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Sleep&lt;/li&gt;
+        &lt;li&gt;Eat&lt;/li&gt;
+        &lt;li&gt;Drink&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div>
+                <h3>css</h3>
+                <pre><code>
+.sc4 .note {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(248, 248, 119);
+    color: #000;
+    padding: 15px 40px 20px 40px;
+    transition: .8s;
+}
+
+.sc4 .note:hover {
+    transform: skewX(20deg);
+    transform: skewY(20deg);
+    transition: .8s;
+}
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2>Scale</h2>
+        <div class="row">
+            <div class="showcase sc5">
+                <div class="note">
+                    <h1>TODO</h1>
+                    <ul>
+                        <li>Sleep</li>
+                        <li>Eat</li>
+                        <li>Drink</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3>HTML</h3>
+                <pre><code>
+&lt;div class=&quot;note&quot;&gt;
+    &lt;h1&gt;TODO&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Sleep&lt;/li&gt;
+        &lt;li&gt;Eat&lt;/li&gt;
+        &lt;li&gt;Drink&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div>
+                <h3>css</h3>
+                <pre><code>
+.note {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(248, 248, 119);
+    color: #000;
+    padding: 15px 40px 20px 40px;
+}
+
+.note:hover {
+    padding: 60px 80px 80px 80px;
+    transition: .8s;
+}
+            </code></pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="showcase sc6">
+            <div class="note">
+                <h1>TODO</h1>
+                <ul>
+                    <li>Sleep</li>
+                    <li>Eat</li>
+                    <li>Drink</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>HTML</h3>
+            <pre><code>
+&lt;div class=&quot;note&quot;&gt;
+&lt;h1&gt;TODO&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;Sleep&lt;/li&gt;
+    &lt;li&gt;Eat&lt;/li&gt;
+    &lt;li&gt;Drink&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+        <div>
+            <h3>css</h3>
+            <pre><code>
+.note {
+font-family: 'Courier New', Courier, monospace;
+background: rgb(248, 248, 119);
+color: #000;
+padding: 15px 40px 20px 40px;
+}
+
+.note:hover {
+    transform: scale(2, 2);
+    transition: .8s;
+}
+                </code></pre>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2>Matrix</h2>
+        <div class="row">
+            <div class="showcase sc7">
+                <img src="https://wallpaperaccess.com/full/2853747.jpg" alt="matrix">
+            </div>
+            <div>
+                <h3>HTML</h3>
+                <pre><code>
+&lt;img src=&quot;img/matrix.jpg&quot; alt=&quot;matrix&quot;&gt;
+                </code></pre>
+            </div>
+            <div>
+                <h3>css</h3>
+                <pre><code>
+img {
+    width: 300px;
+    height: 300px;
+    transition: .8s;
+}
+
+img:hover {
+    transform: matrix(2, 0.7,-0.8,0.866,-50,100);
+    transition: .8s;
+}
+/*matrix(a, b, c, d, tx, ty)
+a b c d Are <number>s describing the linear transformation.
+tx ty Are <number>s describing the translation to apply.*/
+                </code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid">
+    <div class="container">
+        <h1>Zadání</h1>
+    </div>
+    <div class="container">
+        <h1>Reference</h1>
+    </div>
+</div>
 </body>
