@@ -1,13 +1,25 @@
 <body>
-    <div class="hero">
-        <div class="text">
+    <nav>
+        <ul>
+            <li><a href="#home"><i class="fa fa-"></i> Home</a></li>
+            <li><a href="#transform"><i class="fa fa-"></i> Transform</a></li>
+            <li><a href="#translate"><i class="fa fa-"></i> Translate</a></li>
+            <li><a href="#rotate"><i class="fa fa-"></i> Rotate</a></li>
+            <li><a href="#skew"><i class="fa fa-"></i> Skew</a></li>
+            <li><a href="#scale"><i class="fa fa-"></i> Scale</a></li>
+            <li><a href="#matrix"><i class="fa fa-"></i> Matrix</a></li>
+            <li><a href="#zadani"><i class="fa fa-"></i> Zadání</a></li>
+        </ul>
+    </nav>
+    <div class="hero " id="home">
+        <div class="animate__animated animate__pulse text">
             <h1>CSS Transform</h1>
-            <h2>Matouš Drábek</h2>
-            <h3>Webové Technologie</h3>
+            <h2>Webové Technologie</h2>
+            <h3>Matouš Drábek</h3>
         </div>
     </div>
-    <div class="grid">
-        <div class="container">
+    <div class="grid" id="transform">
+        <div class="container animate__animated animate__zoomInLeft">
             <h1>K čemu transform slouží?</h1>
             <p>Úprava elementů</p>
             <ul class="list">
@@ -17,7 +29,7 @@
                 <li>Prespektiva</li>
             </ul>
         </div>
-        <div class="container">
+        <div class="container animate__animated animate__zoomInRight">
             <h1>K čemu transform slouží?</h1>
             <p>Úprava elementů</p>
             <ul class="list">
@@ -28,7 +40,7 @@
         </div>
     </div>
     <h1 class="label">Ukázky</h1>
-    <div class="container ">
+    <div class="container" id="translate">
         <h2>Translate</h2>
         <div class="row">
             <div class="showcase sc1">
@@ -43,7 +55,7 @@
                 </code></pre>
             </div>
             <div>
-                <h3>css</h3>
+                <h3>CSS</h3>
                 <pre><code>
 div {
     width: 100px;
@@ -60,7 +72,7 @@ div {
     </div>
 
 
-    <div class="container">
+    <div class="container" id="rotate">
         <h2>Rotate</h2>
         <div class="row">
             <div class="showcase sc2">
@@ -77,13 +89,14 @@ div {
                 </code></pre>
             </div>
             <div>
-                <h3>css</h3>
+                <h3>CSS</h3>
                 <pre><code>
 .btn {
     /*center*/
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
     background: red;
     transition: .8s;
 }
@@ -98,7 +111,7 @@ div {
     </div>
 
 
-    <div class="container">
+    <div class="container" id="skew">
         <h2>Skew</h2>
         <div class="row">
             <div class="showcase sc3">
@@ -125,7 +138,7 @@ div {
                 </code></pre>
             </div>
             <div>
-                <h3>css</h3>
+                <h3>CSS</h3>
                 <pre><code>
 .note {
     font-family: 'Courier New', Courier, monospace;
@@ -162,7 +175,7 @@ div {
                 </code></pre>
             </div>
             <div>
-                <h3>css</h3>
+                <h3>CSS</h3>
                 <pre><code>
 .sc4 .note {
     font-family: 'Courier New', Courier, monospace;
@@ -183,7 +196,7 @@ div {
     </div>
 
 
-    <div class="container">
+    <div class="container" id="scale">
         <h2>Scale</h2>
         <div class="row">
             <div class="showcase sc5">
@@ -210,7 +223,7 @@ div {
                 </code></pre>
             </div>
             <div>
-                <h3>css</h3>
+                <h3>CSS</h3>
                 <pre><code>
 .note {
     font-family: 'Courier New', Courier, monospace;
@@ -251,7 +264,7 @@ div {
             </code></pre>
         </div>
         <div>
-            <h3>css</h3>
+            <h3>CSS</h3>
             <pre><code>
 .note {
 font-family: 'Courier New', Courier, monospace;
@@ -270,7 +283,7 @@ padding: 15px 40px 20px 40px;
     </div>
 
 
-    <div class="container">
+    <div class="container" id="matrix">
         <h2>Matrix</h2>
         <div class="row">
             <div class="showcase sc7">
@@ -283,7 +296,7 @@ padding: 15px 40px 20px 40px;
                 </code></pre>
             </div>
             <div>
-                <h3>css</h3>
+                <h3>CSS</h3>
                 <pre><code>
 img {
     width: 300px;
@@ -304,11 +317,31 @@ tx ty Are <number>s describing the translation to apply.*/
     </div>
 </div>
 <div class="grid">
-    <div class="container">
-        <h1>Zadání</h1>
+    <div class="container animate__backInLeft animate__animated" id="zadani">
+        <h1><i class="fa fa-book"></i> Zadání</h1>
     </div>
-    <div class="container">
+    <div class="container animate__backInRight animate__animated">
         <h1>Reference</h1>
+        <div class="grid2">
+            <div class="row">
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+            </div>
+            <div class="row">
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+            </div>
+            <div class="row">
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+                <a href=""><i class="fa fa-"></i> test</a>
+            </div>
+        </div>
     </div>
 </div>
 </body>
