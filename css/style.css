@@ -16,6 +16,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg1);
@@ -283,6 +287,21 @@ nav a {
 }
 
 #navbtn {
-    border: 2px solid red;
     height: 100%;
+}
+
+.active {
+    display: none;
+}
+
+.references a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+    border-radius: 6px;
+}
+
+.references a:hover {
+    color: #9b9b9b;
+    transition: .3s;
 }

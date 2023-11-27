@@ -12,9 +12,14 @@
     <script>hljs.highlightAll();</script>
 <title>CSS Transform</title>
 </head>
+<body>    
 <?php
     include_once "components/header.html";
+    include_once "components/nav.html";
     include_once "components/home.html";
     include_once "components/footer.html";
 ?>
+<script src="script.js"></script>
+</body>
+
 </html>
